@@ -1,0 +1,108 @@
+# =============================================================================
+# SFUDA_Paper — public push hygiene
+# =============================================================================
+# Note: Source code lives under WiMANS/ and WiDAR/; do not ignore those trees.
+# Optional dataset mirrors at this repo root (lowercase) per project layout:
+# =============================================================================
+
+/widar/
+/wimans/
+
+# -----------------------------------------------------------------------------
+# Model checkpoints
+# -----------------------------------------------------------------------------
+*.pt
+*.pth
+
+# -----------------------------------------------------------------------------
+# Outputs & experiment artifacts (nothing under here is pushed)
+# -----------------------------------------------------------------------------
+*.pdf
+*.txt
+!requirements.txt
+
+results/
+outputs/
+**/SHOTPlus*_Results/
+**/SHOT_WiMANS_results/
+**/WiDAR_Domain_Adaptation_results/
+**/analysis_results/
+**/Backup*Results/
+**/tsne_figures/
+**/tsne_figures_logits/
+
+*.json
+*.log
+*.csv
+wandb/
+runs/
+checkpoints/
+logs/
+
+# Archives / large binaries
+*.pkl
+*.pickle
+*.h5
+*.hdf5
+*.npz
+*.zip
+*.tar.gz
+
+# -----------------------------------------------------------------------------
+# Cache & build
+# -----------------------------------------------------------------------------
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# -----------------------------------------------------------------------------
+# Environments & secrets
+# -----------------------------------------------------------------------------
+.env
+*.env
+.venv/
+venv/
+env/
+
+# -----------------------------------------------------------------------------
+# Jupyter & notebooks
+# -----------------------------------------------------------------------------
+.ipynb_checkpoints/
+*.ipynb
+
+# -----------------------------------------------------------------------------
+# IDE / OS
+# -----------------------------------------------------------------------------
+.DS_Store
+.idea/
+.vscode/
+*.swp
+
+# -----------------------------------------------------------------------------
+# Cluster / local job templates (keep account names out of git)
+# -----------------------------------------------------------------------------
+*.sbatch
+slurm_logs/
+local_slurm/
+
+# -----------------------------------------------------------------------------
+# Optional: profiling / one-off scripts (not imported by uda_widar / uda_wimans)
+# -----------------------------------------------------------------------------
+WiMANS/SHOTPlus/benchmark_overhead.py
+
+# t-SNE figures / analysis drivers (local plotting & tables)
+WiMANS/analysis_results.py
+WiMANS/tsne_visualization.py
+WiMANS/SHOTPlus/tsne_visualization.py
+WiDAR/analyzeresults.py
+WiMANS/SHOTPlus/simple_uda_training.py
+WiDAR/SHOTPlus/test.py
+
+# Internal cleanup notes (may contain machine-specific examples)
+GIT_CLEANUP_TASK.md
