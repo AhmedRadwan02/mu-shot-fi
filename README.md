@@ -80,3 +80,16 @@ python uda_wimans.py
 ```
 
 Logs, checkpoints, and aggregated metrics are written under the `save_dir` defined in each `preset.py` (see `.gitignore` for patterns that stay local and are not intended for git).
+
+---
+
+## Citation
+
+```
+@ARTICLE{radwan2026mushotfi,
+  author={Radwan, Ahmed Y. and Tabassum, Hina},
+  journal={IEEE Internet of Things Journal}, 
+  title={MU-SHOT-Fi: Self-Supervised Multi-User Wi-Fi Sensing with Source-free Unsupervised Domain Adaptation}, 
+  year={2026},
+  doi={10.1109/JIOT.2026.3686090}}
+```
