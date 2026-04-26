@@ -86,10 +86,12 @@ Logs, checkpoints, and aggregated metrics are written under the `save_dir` defin
 ## Citation
 
 ```
-@ARTICLE{radwan2026mushotfi,
-  author={Radwan, Ahmed Y. and Tabassum, Hina},
-  journal={IEEE Internet of Things Journal}, 
-  title={MU-SHOT-Fi: Self-Supervised Multi-User Wi-Fi Sensing with Source-free Unsupervised Domain Adaptation}, 
+@article{radwan2026mu,
+  title={MU-SHOT-Fi: Self-Supervised Multi-User Wi-Fi Sensing with Source-free Unsupervised Domain Adaptation},
+  author={Radwan, Ahmed Y and Tabassum, Hina},
+  journal={IEEE Internet of Things Journal},
   year={2026},
-  doi={10.1109/JIOT.2026.3686090}}
+  doi={10.1109/JIOT.2026.3686090},
+  publisher={IEEE}
+}
 ```
