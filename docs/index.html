@@ -199,36 +199,30 @@
             <tr><td>SHOT-IM</td><td>2.82</td><td>24.97</td><td>37.12</td><td>2.07</td><td>17.99</td></tr>
             <tr><td>SHOT++</td><td>7.05</td><td>16.88</td><td>55.32</td><td>1.63</td><td>23.28</td></tr>
             <tr><td>MU-SHOT-Fi (Ours)</td><td>7.76</td><td>17.08</td><td>55.29</td><td>1.60</td><td>24.61</td></tr>
+            <tr><td>MU-SHOT-Fi + CPC</td><td>6.34</td><td>16.16</td><td>55.43</td><td>1.63</td><td>22.75</td></tr>
             <tr><td colspan="6" style="font-weight:700;background:var(--bg-soft);text-align:left;padding-left:1rem;">Cross-Frequency</td></tr>
             <tr><td>Source Only</td><td>0.00</td><td>25.69</td><td>21.16</td><td>2.92</td><td>7.40</td></tr>
             <tr><td>SHOT-IM</td><td>0.35</td><td>26.56</td><td>32.39</td><td>2.61</td><td>9.34</td></tr>
             <tr><td>SHOT++</td><td>0.71</td><td>19.61</td><td>47.08</td><td>1.89</td><td>15.16</td></tr>
             <tr><td>MU-SHOT-Fi (Ours)</td><td>0.71</td><td>18.82</td><td>46.97</td><td>1.89</td><td>14.63</td></tr>
+            <tr><td>MU-SHOT-Fi + CPC</td><td>1.41</td><td>19.55</td><td>47.33</td><td>1.91</td><td>13.40</td></tr>
             <tr><td colspan="6" style="font-weight:700;background:var(--bg-soft);text-align:left;padding-left:1rem;">Combined Shift</td></tr>
             <tr><td>Source Only</td><td>0.00</td><td>24.99</td><td>19.61</td><td>3.00</td><td>5.99</td></tr>
             <tr><td>SHOT-IM</td><td>0.00</td><td>23.62</td><td>28.63</td><td>2.80</td><td>9.17</td></tr>
             <tr><td>SHOT++</td><td>0.18</td><td>19.23</td><td>41.06</td><td>2.16</td><td>10.58</td></tr>
             <tr><td>MU-SHOT-Fi (Ours)</td><td>0.18</td><td>18.47</td><td>41.97</td><td>2.12</td><td>10.93</td></tr>
+            <tr><td>MU-SHOT-Fi + CPC</td><td>0.18</td><td>18.45</td><td>41.58</td><td>2.15</td><td>5.99</td></tr>
             <tr><td colspan="6" style="font-weight:700;background:var(--bg-soft);text-align:left;padding-left:1rem;">Average</td></tr>
             <tr><td>Source Only</td><td>0.71</td><td>22.19</td><td>31.95</td><td>2.48</td><td>11.28</td></tr>
             <tr><td>SHOT-IM</td><td>1.06</td><td>25.05</td><td>32.71</td><td>2.49</td><td>12.17</td></tr>
             <tr><td>SHOT++</td><td>2.65</td><td>18.57</td><td>47.82</td><td>1.89</td><td>16.34</td></tr>
             <tr><td>MU-SHOT-Fi (Ours)</td><td>2.88</td><td>18.12</td><td>48.08</td><td>1.87</td><td>16.72</td></tr>
+            <tr><td>MU-SHOT-Fi + CPC</td><td>2.64</td><td>18.05</td><td>48.11</td><td>1.90</td><td>14.04</td></tr>
+            <tr><td>Random Predictor</td><td>≈0.00</td><td>≈11.11</td><td>≈10.00</td><td>≈5.00</td><td>≈1.54</td></tr>
           </tbody>
         </table>
       </div>
-      <p class="small muted">Random predictor over \(K{+}1{=}10\) classes per slot: ≈0.00 exact match, ≈10.0 slot accuracy, ≈5.0 occupancy MAE.</p>
-
-      <div class="figure-grid-2">
-        <figure class="figure">
-          <img src="./static/images/crossMix_fig_exact_match.png" alt="WiMANS exact-match accuracy under combined shift" loading="lazy">
-          <figcaption><strong>Figure 3.</strong> WiMANS exact-match accuracy under combined shift (higher is better).</figcaption>
-        </figure>
-        <figure class="figure">
-          <img src="./static/images/CrossMix_fig_occupancy_mae.png" alt="Occupancy counting error under combined shift" loading="lazy">
-          <figcaption><strong>Figure 4.</strong> Occupancy counting error (MAE) under combined shift (lower is better).</figcaption>
-        </figure>
-      </div>
+      <p class="small muted">Values in %, except Occupancy MAE. Random predictor assumes uniform predictions over \(K{+}1{=}10\) classes per slot.</p>
 
       <p class="table-caption">Widar 3.0: SFUDA results under three domain shifts (%)</p>
       <div class="table-wrap">
@@ -275,7 +269,7 @@
       <div class="h3">Ablation studies</div>
       <figure class="figure">
         <img src="./static/images/f1_comparison_bars.png" alt="Per-class F1 comparison under cross-frequency shift" loading="lazy">
-        <figcaption><strong>Figure 5.</strong> Per-class F1 under Cross-Frequency shift (source-only). A DETR-style decoder reaches 77.1% F1 on "no person" but only 14.5% average on activities — majority-class exploitation — whereas parallel slot heads stay more balanced.</figcaption>
+        <figcaption><strong>Figure 3.</strong> Per-class F1 under Cross-Frequency shift (source-only). A DETR-style decoder reaches 77.1% F1 on "no person" but only 14.5% average on activities — majority-class exploitation — whereas parallel heads are more balanced (23.1% vs. 16.3%).</figcaption>
       </figure>
     </div>
   </section>
